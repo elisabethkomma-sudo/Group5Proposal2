@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var names: [String] = ["Elisabeth", "Ross"]
     var projects: [String] = ["Frontend", "Backend", "UI Design"]
     var preview: [String] = ["Project UI Image"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,7 +24,30 @@ class ViewController: UIViewController {
         //tableView.backgroundColor = UIColor(patternImage: UIImage(named:"background")!)
         tableView.backgroundView = imageView
         //tableView.backgroundColor = .clear
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = sender as? IndexPath else {
+            return
+        }
         
+        switch segue.identifier {
+        case "members":
+            let vc = segue.destination as! MemberViewController
+            vc.memberName = names[indexPath.row]
+            //vc.memberRole = memberRoles[indexPath.row]
+            //vc.memberNotes = memberNotes[indexPath.row]
+        case "projects":
+            print("segue2")
+            //let vc = segue.destination as! ComponentViewController
+            //vc.componentName = projectComponents[indexPath.row]
+            //vc.componentFeatures = componentFeatures[indexPath.row]
+        case "preview":
+            print("segue3")
+            //let vc = segue.destination as! PreviewViewController
+        default:
+            return
+        }
     }
 }
 
@@ -31,6 +55,7 @@ extension ViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("#1", #function)
         switch section{
@@ -88,7 +113,7 @@ extension ViewController: UITableViewDelegate {
         switch indexPath.section {
         case 0:
             print("Selected name: \(names[indexPath.row])")
-            performSegue(withIdentifier: "members", sender: self)
+            performSegue(withIdentifier: "members", sender: indexPath)
         case 1:
             print("Selected project: \(projects[indexPath.row])")
             performSegue(withIdentifier: "projects", sender: self)
