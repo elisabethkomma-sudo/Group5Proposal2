@@ -8,11 +8,21 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     var names: [String] = ["Elisabeth", "Ross"]
     var projects: [String] = ["Frontend", "Backend", "UI Design"]
     var preview: [String] = ["Project UI Image"]
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let imageView = UIImageView(image: UIImage(named: "background"))
+        imageView.contentMode = .scaleAspectFill
+        //tableView.backgroundColor = UIColor(patternImage: UIImage(named:"background")!)
+        tableView.backgroundView = imageView
+        //tableView.backgroundColor = .clear
         
     }
 }
@@ -78,10 +88,13 @@ extension ViewController: UITableViewDelegate {
         switch indexPath.section {
         case 0:
             print("Selected name: \(names[indexPath.row])")
+            performSegue(withIdentifier: "members", sender: self)
         case 1:
             print("Selected project: \(projects[indexPath.row])")
+            performSegue(withIdentifier: "projects", sender: self)
         default:
             print("Selected preview: \(preview[indexPath.row])")
+            performSegue(withIdentifier: "preview", sender: self)
         }
     }
 }
