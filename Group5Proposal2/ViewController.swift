@@ -39,8 +39,8 @@ class ViewController: UIViewController {
             //vc.memberNotes = memberNotes[indexPath.row]
         case "projects":
             print("segue2")
-            //let vc = segue.destination as! ComponentViewController
-            //vc.componentName = projectComponents[indexPath.row]
+            let vc = segue.destination as! ComponentViewController
+            vc.componentName = projects[indexPath.row]
             //vc.componentFeatures = componentFeatures[indexPath.row]
         case "preview":
             print("segue3")
@@ -116,10 +116,10 @@ extension ViewController: UITableViewDelegate {
             performSegue(withIdentifier: "members", sender: indexPath)
         case 1:
             print("Selected project: \(projects[indexPath.row])")
-            performSegue(withIdentifier: "projects", sender: self)
+            performSegue(withIdentifier: "projects", sender: indexPath)
         default:
             print("Selected preview: \(preview[indexPath.row])")
-            performSegue(withIdentifier: "preview", sender: self)
+            performSegue(withIdentifier: "preview", sender: indexPath)
         }
     }
 }

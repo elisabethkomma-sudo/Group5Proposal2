@@ -148,7 +148,7 @@
         <!--PreviewPage-->
         <scene sceneID="nzt-zu-5r1">
             <objects>
-                <viewController title="PreviewPage" id="aRW-E6-fru" sceneMemberID="viewController">
+                <viewController title="PreviewPage" id="aRW-E6-fru" customClass="PreviewViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4fc-th-PVl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,7 +176,7 @@
         <!--ProjectPage-->
         <scene sceneID="vDA-Y2-hpC">
             <objects>
-                <viewController title="ProjectPage" id="yg8-WT-8Ee" sceneMemberID="viewController">
+                <viewController title="ProjectPage" id="yg8-WT-8Ee" customClass="ComponentViewController" customModule="Group5Proposal2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nQp-QD-fep">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -236,6 +236,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ntk-gR-8ob"/>
+                    <connections>
+                        <outlet property="projectComponentLabel" destination="3ij-T5-shb" id="XDm-55-95A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Bs-7D-MBX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
