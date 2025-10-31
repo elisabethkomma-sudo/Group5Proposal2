@@ -27,23 +27,22 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let indexPath = sender as? IndexPath else {
-            return
-        }
-        
-        switch segue.identifier {
-        case "members":
-            let vc = segue.destination as! MemberViewController
-            vc.memberName = names[indexPath.row]
-            //vc.memberRole = memberRoles[indexPath.row]
-        case "projects":
-            let vc = segue.destination as! ComponentViewController
-            vc.componentName = projects[indexPath.row]
-            //vc.componentFeatures = componentFeatures[indexPath.row]
-        case "preview":
-            let vc = segue.destination as! PreviewViewController
-        default:
-            return
+        if let indexPath = sender as? IndexPath {
+            switch segue.identifier {
+            case "members":
+                let vc = segue.destination as! MemberViewController
+                vc.memberName = names[indexPath.row]
+                vc.indexPath = indexPath
+            case "projects":
+                let vc = segue.destination as! ComponentViewController
+                vc.componentName = projects[indexPath.row]
+                vc.indexPath = indexPath
+            case "preview":
+                let vc = segue.destination as! PreviewViewController
+                vc.indexPath = indexPath
+            default:
+                return
+            }
         }
     }
 }

@@ -9,7 +9,7 @@ import UIKit
 
 class ComponentViewController: UIViewController {
     var componentName: String?
-    var componentFeatures: String?
+    var indexPath: IndexPath?
     
     @IBOutlet weak var projectComponentLabel: UILabel!
     

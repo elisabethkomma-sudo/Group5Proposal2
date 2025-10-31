@@ -8,6 +8,8 @@
 import UIKit
 
 class PreviewViewController: UIViewController {
+    var indexPath: IndexPath?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -9,7 +9,7 @@ import UIKit
 
 class MemberViewController: UIViewController {
     var memberName: String?
-    var memberRole: String?
+    var indexPath: IndexPath?
     
     @IBOutlet weak var memberNameLabel: UILabel!
     
