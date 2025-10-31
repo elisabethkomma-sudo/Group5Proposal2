@@ -36,15 +36,12 @@ class ViewController: UIViewController {
             let vc = segue.destination as! MemberViewController
             vc.memberName = names[indexPath.row]
             //vc.memberRole = memberRoles[indexPath.row]
-            //vc.memberNotes = memberNotes[indexPath.row]
         case "projects":
-            print("segue2")
             let vc = segue.destination as! ComponentViewController
             vc.componentName = projects[indexPath.row]
             //vc.componentFeatures = componentFeatures[indexPath.row]
         case "preview":
-            print("segue3")
-            //let vc = segue.destination as! PreviewViewController
+            let vc = segue.destination as! PreviewViewController
         default:
             return
         }

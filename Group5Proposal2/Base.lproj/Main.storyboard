@@ -138,7 +138,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="F1d-Cn-vcf"/>
                     <connections>
-                        <outlet property="memberNameLabel" destination="rix-sU-fG1" id="5xC-rZ-cPF"/>
+                        <outlet property="memberNameLabel" destination="ki3-eO-BYk" id="krQ-G3-tbO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TWG-gd-6hB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -148,7 +148,7 @@
         <!--PreviewPage-->
         <scene sceneID="nzt-zu-5r1">
             <objects>
-                <viewController title="PreviewPage" id="aRW-E6-fru" customClass="PreviewViewController" sceneMemberID="viewController">
+                <viewController title="PreviewPage" id="aRW-E6-fru" customClass="PreviewViewController" customModule="Group5Proposal2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4fc-th-PVl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

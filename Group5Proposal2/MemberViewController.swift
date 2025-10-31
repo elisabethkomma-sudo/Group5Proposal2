@@ -10,7 +10,6 @@ import UIKit
 class MemberViewController: UIViewController {
     var memberName: String?
     var memberRole: String?
-    var memberNotes: String?
     
     @IBOutlet weak var memberNameLabel: UILabel!
     
