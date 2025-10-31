@@ -139,6 +139,7 @@
                     <navigationItem key="navigationItem" id="F1d-Cn-vcf"/>
                     <connections>
                         <outlet property="memberNameLabel" destination="ki3-eO-BYk" id="krQ-G3-tbO"/>
+                        <outlet property="memberRolesLabel" destination="mSC-wl-BEx" id="mXO-KF-ApZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TWG-gd-6hB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

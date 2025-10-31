@@ -12,12 +12,34 @@ class MemberViewController: UIViewController {
     var indexPath: IndexPath?
     
     @IBOutlet weak var memberNameLabel: UILabel!
-    
+    @IBOutlet weak var memberRolesLabel: UITextView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let name = memberName {
-            memberNameLabel.text = name
+        guard let name = memberName else {
+            return
+        }
+        
+        guard let ip = indexPath else {
+            return
+        }
+        
+        memberNameLabel.text = name
+        
+        switch memberName {
+        case "Elisabeth":
+            memberRolesLabel.text = """
+                - Create basic layout
+                - Add detail to each view to make them visually appealing
+                """
+        case "Ross":
+            memberRolesLabel.text = """
+                - Write code for views
+                - Test functionality and fix bugs for views
+                """
+        default:
+            return
         }
     }
 }
