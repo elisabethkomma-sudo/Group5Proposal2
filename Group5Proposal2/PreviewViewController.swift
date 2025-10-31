@@ -12,6 +12,9 @@ class PreviewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        guard let ip = indexPath else {
+            return
+        }
     }
 }
