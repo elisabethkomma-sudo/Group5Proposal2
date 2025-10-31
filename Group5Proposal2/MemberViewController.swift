@@ -27,7 +27,7 @@ class MemberViewController: UIViewController {
         
         memberNameLabel.text = name
         
-        switch memberName {
+        switch name {
         case "Elisabeth":
             memberRolesLabel.text = """
                 - Create basic layout

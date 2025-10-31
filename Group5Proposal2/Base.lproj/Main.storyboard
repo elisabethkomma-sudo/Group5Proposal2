@@ -238,6 +238,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ntk-gR-8ob"/>
                     <connections>
+                        <outlet property="componentDetailsLabel" destination="Lnp-N2-Xi4" id="yP9-sU-8Tk"/>
                         <outlet property="projectComponentLabel" destination="3ij-T5-shb" id="XDm-55-95A"/>
                     </connections>
                 </viewController>
