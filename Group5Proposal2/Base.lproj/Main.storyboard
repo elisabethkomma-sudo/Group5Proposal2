@@ -158,7 +158,44 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9LG-WZ-iZr">
                                 <rect key="frame" x="61" y="264" width="271" height="470"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notepad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoE-31-DQw">
+                                        <rect key="frame" x="20" y="20" width="92" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="3ey-hN-TKO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tnf-iK-1Qe">
+                                        <rect key="frame" x="235" y="20" width="16" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="KcZ-TU-4bu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LJv-nD-TZa">
+                                        <rect key="frame" x="15" y="75" width="241" height="2"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="JNd-XE-R39"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Tnf-iK-1Qe" firstAttribute="top" secondItem="9LG-WZ-iZr" secondAttribute="top" constant="20" id="4w5-ga-p11"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Tnf-iK-1Qe" secondAttribute="trailing" symbolic="YES" id="98n-X5-F2D"/>
+                                    <constraint firstItem="WoE-31-DQw" firstAttribute="leading" secondItem="9LG-WZ-iZr" secondAttribute="leading" constant="20" id="Pip-Zj-eBA"/>
+                                    <constraint firstItem="WoE-31-DQw" firstAttribute="top" secondItem="9LG-WZ-iZr" secondAttribute="top" constant="20" id="TTG-bU-zVr"/>
+                                    <constraint firstItem="Tnf-iK-1Qe" firstAttribute="leading" secondItem="WoE-31-DQw" secondAttribute="trailing" constant="123" id="afE-bc-P0v"/>
+                                    <constraint firstItem="LJv-nD-TZa" firstAttribute="leading" secondItem="9LG-WZ-iZr" secondAttribute="leading" constant="15" id="ejx-KT-JKd"/>
+                                    <constraint firstItem="LJv-nD-TZa" firstAttribute="top" secondItem="WoE-31-DQw" secondAttribute="bottom" constant="25" id="mWu-3f-sbV"/>
+                                    <constraint firstAttribute="trailing" secondItem="LJv-nD-TZa" secondAttribute="trailing" constant="15" id="tgJ-TO-bR5"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kGy-cc-Ft7"/>
