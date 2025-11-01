@@ -10,9 +10,10 @@ import UIKit
 class PreviewViewController: UIViewController {
     var indexPath: IndexPath?
     
+    @IBOutlet weak var previewView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        previewView.layer.cornerRadius = 10
         guard let ip = indexPath else {
             return
         }

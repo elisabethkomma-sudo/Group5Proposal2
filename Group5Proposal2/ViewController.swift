@@ -75,7 +75,10 @@ extension ViewController: UITableViewDataSource {
             cell.textLabel?.text = "\(projects[indexPath.row])"
             break
         default:
+            let image = UIImage(named: "preview")
             cell.textLabel?.text = "\(preview[indexPath.row])"
+            image?.draw(in: CGRect(x: 0, y: 0, width: 100, height: 100))
+            cell.imageView?.image = image
             break
         }
         return cell
@@ -95,11 +98,11 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         switch section {
         case 0:
-            return "Description 1."
+            return "Team member and role in the project."
         case 1:
-            return "Description 2."
+            return "Components and features of the project."
         default:
-            return "Description 3."
+            return "Tap to view the full image."
         }
     }
 }
